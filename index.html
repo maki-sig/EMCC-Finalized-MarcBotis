@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="emcclogo.png">
+        <title>Electric Meter Consumption Calculator by Marc Botis</title>
+
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- CALCULATOR JAVSCRIPT AND CSS -->
+        <script src="emcc.js"></script>
+        <link href="emcc.css" rel="stylesheet">
+
+        <!-- WINDMILL AND SLEEPY CAT -->
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
+        <!-- FONTS HEPTA SLAB AND INTER --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="row" id="row">
+            <!-- FIRST HALF -->
+            <div class="col-sm-5 position-relative" id="firsthalf">
+                
+                <div class="content" id="content">
+                    <h1 class="display1" id="txtheader">Electric Meter Consumption Calculator</h1>
+                    <h2 class="display2" id="txtdesc">
+                        Track your electricity usage and manage bills with ease.
+                    </h2>
+    
+                    <div class="animation-wrapper">
+                        <dotlottie-player src="https://lottie.host/89e2033a-066e-4f6e-9557-bcf00fdccd68/43iVGMV3fc.lottie" 
+                            background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    </div>
+                </div>
+               
+            
+            </div>
+            
+            <!-- SECOND HALF -->
+            <div class="col-sm-7" id="secondhalf">
+                <!-- FORM -->
+                <form id="calculatorform" onsubmit="validateAndCalculate(event)">
+
+                    <div class="form-group mb-4">
+                        <label for="meternum">Meter Number</label><br>
+                        <input type="text" id="meternum" placeholder="Enter the meter number" required>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group mb-4">
+                        <label for="prevreadinput">Previous Reading (kWh)</label><br>
+                        <input type="number" id="prevreadinput" placeholder="Enter the previous reading" step="any" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="currentreadinput">Current Reading (kWh)</label><br>
+                        <input type="number" id="currentreadinput" placeholder="Enter the current reading" step="any" required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="costinput">Cost (PHP)</label><br>
+                        <input type="number" id="costinput" placeholder="Enter the cost per kwh" step="any" required>
+                    </div>
+
+                    <hr>
+                    
+                    <div class="form-group mt-4">
+                        <button type="submit" id="btn">Calculate!</button>
+                    </div>
+                    
+                </form>
+
+            </div>
+        </div>
+
+        <!-- LOADING SCREEN -->
+        <div id="loadingscreen" class="col-sm-12">
+          
+            <!-- LOADING SCREEN BACKGROUND -->
+            <div class="row" id="backgroundRow">
+
+                <div class="col-sm-5" id="loadingFirsthalf"></div>
+                <div class="col-sm-7" id="loadingSecondhalf"></div>
+                
+            </div>
+
+            <!-- LOADING SCREEN CONTENT -->
+            <div id="loadingText">
+
+                <h1 class="display1" id="calculatingtxt">
+                    CALCULATING...
+                </h1>
+
+                <div class="animation-wrapper2">
+                    <dotlottie-player src="https://lottie.host/045bcbb4-383f-4315-a1e2-3891eb20a222/lYfbDDjHYx.lottie" background="transparent" speed="1" style="width: 500px; height: 500px" loop autoplay></dotlottie-player>
+                </div>
+                    
+                 
+            </div> 
+
+        </div>
+
+    </body>
+</html>

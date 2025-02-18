@@ -1,0 +1,268 @@
+/* BODY */
+body {
+    height: 100vh; 
+    margin: 0; 
+    background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
+    background-attachment: fixed;
+}
+
+#row {
+    margin: auto;
+    height: 100vh;
+}
+
+#firsthalf {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* FIRST HALF */
+#txtheader {
+    font-family: Hepta Slab;
+    font-weight: 700;
+    size: 48px;
+    line-height: 60.05px;
+    color: #DF735B;
+    margin: auto;
+}
+
+#txtdesc {
+    font-family: Inter;
+    font-weight: 400;
+    size: 32px;
+    line-height: 38.73px;
+    color: #1B1F2F;
+    margin: auto;
+    margin-top: 5%;
+}
+
+/* CROP GIF */
+.animation-wrapper {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    width: 200px; 
+    height: 230px;  
+    overflow: hidden;  
+    transform: translate(-50%, -50%);
+}
+
+.animation-wrapper dotlottie-player {
+    width: 450px;  
+    height: 450px;
+    position: absolute;
+    top: -100px;  
+    left: -150px;
+}
+
+/* ADJUST WINDMILL FOR MOBILE */
+@media (max-width: 575px) {
+    .animation-wrapper {
+        /* left: 55%;
+        top: 88.5%;
+        width: 100px; 
+        height: 100px;   */
+        display: none;
+    }
+
+    /* .animation-wrapper dotlottie-player {
+        width: 250px;  
+        height: 250px;
+        position: absolute;
+        top: -75px;
+        left: -100px;
+    } */
+}
+
+/* @media (max-width: 386px) {
+    .animation-wrapper {
+        display: none;
+    }
+} */
+
+/* SECOND HALF */
+#secondhalf {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+hr {
+    height: 2px;
+    color: white;
+}
+
+label {
+    font-family: Inter;
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    
+}
+
+form {
+    margin: auto;
+    width: 700px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+input:focus {
+    outline: 3px solid #DF735B;
+}
+
+.form-group {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+
+#btn {
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    padding: 10px;
+    background-color: #DF735B;
+    width: 100%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background-color: #ad5d4a;
+    color: white;
+    transition: 0.1s
+}
+
+#btn:active {
+    background-color: #6b372a;
+    color: white;
+}
+
+/* LOADING PAGE */
+
+#loadingscreen {
+    display: none;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100vw;  
+    height: 100vh;  
+    z-index: 9999; 
+    overflow: hidden;  
+}
+
+/* TILT ANIMATION FOR THE ROW ID*/
+@keyframes tiltAnimation {
+    0% {
+        transform: rotate(0deg);  
+    }
+    100% {
+        translate: -47% -50%; 
+        transform: rotate(-10.5deg);
+         
+    }
+}
+
+
+/* CSS TO ANIMATE THE ROW ID */
+#loadingscreen .row { 
+    height: 200%;
+    width: 200%;
+    position: absolute;  
+    top: 50%;
+    left: 59.2%; 
+    transform-origin: center;
+    translate: -50% -50%;  
+    animation: tiltAnimation 1s ease-out forwards;  
+}
+
+
+#loadingSecondhalf {
+    background-color: rgba(0, 0, 0, 0.5);
+   
+}
+
+#loadingText {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    width: 100%;  
+    height: 100vh;  
+    text-align: center;  
+}
+
+
+#calculatingtxt {
+    font-family: Hepta Slab;
+    font-size: 96px;  
+    font-weight: 700;
+    color: #DF735B;  
+    text-align: center;
+    
+    text-shadow:  
+        3px 3px 0px rgba(0, 0, 0, 0.2),  /* Base shadow */
+        6px 6px 10px rgba(0, 0, 0, 0.3); /* Softer, blurred shadow for depth */
+}
+
+.animation-wrapper2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    /* width: 100%; 
+    height: 100%;  */
+}
+
+/* MAKE LOADING SCREEN RESPONSIVE FOR MOBILE */
+@media (max-width: 920px) {
+    #calculatingtxt {
+        font-size: 50px; 
+    }
+    
+    .animation-wrapper2 dotlottie-player {
+        width: 300px !important;  
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    #calculatingtxt {
+        font-size: 35px;  
+    }
+    
+    .animation-wrapper2 dotlottie-player {
+        width: 200px !important; /* Further reduce animation size */
+        height: 200px !important;
+    }
+}
+
+
+ 
+
+
+ 

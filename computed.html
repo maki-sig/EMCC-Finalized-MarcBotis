@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="emcclogo.png">
+        <title>Electric Meter Consumption Calculator by Marc Botis</title>
+
+        <!-- JS AND CSS -->
+        <script src="emcc.js"></script>
+        <link href="computed.css?v=2" rel="stylesheet">
+
+        <!-- BOOTSTRAP -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- FONTS HEPTA SLAB AND INTER --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- CAT LOTTIE GIF -->
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    </head>
+
+    <body>
+        
+        <!-- BACKGROUND AND CONTENT -->
+         <div class="col-sm-12" id="bgAndContent">
+
+            <!-- BACKGROUND -->
+            <div class="row" id="bgRow">
+
+                <div class="col-sm-5" id="bgFirsthalf"></div>
+                <div class="col-sm-7" id="bgSecondhalf"></div>
+
+            </div>
+
+            <!-- CONTENTS -->
+            <div class="row" id="contentRow">
+
+                <div class="col-sm-6" id="catGifContent"> 
+
+                    <div class="catGifWrapper">
+                        <dotlottie-player src="https://lottie.host/665d7f7f-e1b6-4b0a-8370-15ecbbb2c2f6/74TDdvsNa4.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6" id="answerContent">
+
+                    <div class="summaryDiv">
+                        
+                        <!-- input tag id monthlyconsump and totalcost, answer will show here -->
+                        <div class="form-group mb-5">
+                            <label for="monthlyconsump">Monthly Consumption (kWh)</label>
+                            <input id="monthlyconsump"   readonly class="mb-4">
+
+                            <label for="totalcost">Total Cost (PHP)</label>
+                            <input id="totalcost" readonly>
+                        </div>
+
+                        <p class="display2">Summary</p>
+                        <ul>
+                            <li class="display2" id="meternumTxt">Meternum: </li>
+                            <li class="display2" id="prevreadTxt">Previous reading: </li>
+                            <li class="display2" id="currentreadTxt">Current reading: </li>
+                            <li class="display2" id="costTxt">Cost: </li>
+                        </ul>
+
+                        <hr>
+                        <p class="display2">Formula</p>
+                        <ul>
+                            <li class="display2">Monthly consumption = [Current reading - Previous reading]</li>
+                            <li class="display2">Total cost = [Monthly consumption * Cost per kWh] </li>
+                        </ul>
+
+                        <hr>
+                        <p class="display2">Result</p>
+                        <ul class="mb-5">
+
+                            <li class="display2" id="formulaTxt1">Monthly consumption: </li>
+                            <li class="display2" id="formulaTxt2">Total cost:  </li>
+
+                        </ul>
+
+                        <button type="button" id="sayonara" onclick="onSayonaraClicked(event)">SAYONARA!</button>
+                    
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12" id="thankyouScreen">
+
+                    <h1 class="display1" id="thankyouTxt"> THANK YOU FOR USING MY APP! </h1>
+                    <div id="catscratchWrapper">
+                        <dotlottie-player src="https://lottie.host/fd3f6b07-9ff0-4767-ac07-e2f3373736c7/ECtuTpV5dJ.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    </div>
+
+                </div>
+               
+
+            </div>
+            
+             
+
+         </div>
+
+    </body>
+</html>
