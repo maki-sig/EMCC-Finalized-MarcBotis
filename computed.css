@@ -40,8 +40,8 @@ body {
 #bgRow { 
     margin: auto;
     z-index: 0; 
-    height: 200%;
-    width: 200%;
+    height: 300%;
+    width: 300%;
     position: absolute;  
     top: 50%;
     left: 70%; 
