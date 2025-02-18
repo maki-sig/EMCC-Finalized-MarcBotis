@@ -174,14 +174,8 @@ input:focus {
         font-size: 22px !important;
     }
 
-    #bgrow {
-        height: 1000px;
-        width: 1000px:
-    }
-
-    #bgSecondhalf {
-        height: 100%;
-        width: 100%;
+    #bgRow {
+        translate: -40.5% -50%; 
     }
     
 }
