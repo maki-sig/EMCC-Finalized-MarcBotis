@@ -41,7 +41,7 @@ body {
     margin: auto;
     z-index: 0; 
     height: 200%;
-    width: 230%;
+    width: 220%;
     position: absolute;  
     top: 50%;
     left: 70%; 
@@ -111,6 +111,15 @@ dotlottie-player {
     }
     
 }
+
+@media (max-width: 565px) {
+
+    #bgRow {
+         top: 35%;
+    }
+    
+}
+
 
 
 /* RIGHT CONTENT */
