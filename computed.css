@@ -104,6 +104,10 @@ dotlottie-player {
     dotlottie-player {
         height: 150px;
     }
+
+    #bgRow {
+        height: 400%;
+    }
     
 }
 
