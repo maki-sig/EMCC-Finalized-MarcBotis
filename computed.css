@@ -281,10 +281,7 @@ input:focus {
         width: 450px;
         height: 450px;
     }
-
-    #bgRow {
-        transform: rotate(10deg);
-    }
+    
   
 }
 
