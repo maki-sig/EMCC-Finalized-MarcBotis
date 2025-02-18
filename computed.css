@@ -283,7 +283,7 @@ input:focus {
     }
 
     #bgRow {
-        width: 500%;
+        transform: rotate(10deg);
     }
   
 }
