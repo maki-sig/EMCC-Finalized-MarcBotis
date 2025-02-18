@@ -173,6 +173,11 @@ input:focus {
     .display2 {
         font-size: 22px !important;
     }
+
+    #bgrow {
+        width: 300%;
+        height: 300%;
+    }
 }
 
 .display2 {
