@@ -30,7 +30,8 @@ body {
        
     }
     100% {
-        transform: rotate(-10deg);  
+        translate: -52.3% -50%;  
+        transform: rotate(-10.5deg);
     }
 }
 
@@ -115,7 +116,7 @@ dotlottie-player {
 @media (max-width: 565px) {
 
     #bgRow {
-         top: 35%;
+         top: 36%;
     }
     
 }
@@ -306,7 +307,7 @@ input:focus {
     }
 
     #thankyouTxt {
-        font-size: 35px !important; 
+        font-size: 30px !important; 
          
     }
 
