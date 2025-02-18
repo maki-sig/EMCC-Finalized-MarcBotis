@@ -106,7 +106,7 @@ dotlottie-player {
     }
 
     #bgRow {
-        height: 400%;
+        translate: -55.5% -40%;
     }
     
 }
