@@ -175,8 +175,15 @@ input:focus {
     }
 
     #bgrow {
-        top: 60%;
+        height: 1000px;
+        width: 1000px:
     }
+
+    #bgSecondhalf {
+        height: 100%;
+        width: 100%;
+    }
+    
 }
 
 .display2 {
