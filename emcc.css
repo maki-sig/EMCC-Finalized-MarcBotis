@@ -44,7 +44,7 @@ body {
 .animation-wrapper {
     position: absolute;
     top: 80%;
-    left: 70%;
+    left: 80%;
     width: 200px; 
     height: 230px;  
     overflow: hidden;  
@@ -60,7 +60,7 @@ body {
 }
 
 /* ADJUST WINDMILL FOR MOBILE */
-@media (max-width: 575px) {
+@media (max-width: 720px) {
     .animation-wrapper {
         /* left: 55%;
         top: 88.5%;
@@ -259,6 +259,13 @@ input:focus {
         width: 200px !important; /* Further reduce animation size */
         height: 200px !important;
     }
+}
+
+.form-text {
+    color: red;
+    font-family: Inter;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); 
 }
 
 

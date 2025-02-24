@@ -25,71 +25,79 @@ function validateAndCalculate(event) {
         //pattern of the meter number
         const meternumPattern = /^[A-Za-z]{4}[0-9]{4}$/;
 
+        //clear error texts
+        document.getElementById("errorText1").innerText = "";
+        document.getElementById("errorText2").innerText = "";
+        document.getElementById("errorText3").innerText = "";
+        document.getElementById("errorText4").innerText = "";
+
         //validate meter number input, if meter number is not the same as the pattern and length is greater than 8 alert an error
         if (!meternumPattern.test(meternumValue)) {
-            alert("Please follow the pattern 4 Letters and 4 Numbers (eg. abcd1234).");
+            document.getElementById("errorText1").innerText = "Format must be 4 letters and 4 numbers. (eg. ABCD1234)";
             meternumField.style.outline = "3px solid red";
             return;
         }
         if (meternumValue.length > 8) {
-            alert("Please input 8 characters only.");
+            document.getElementById("errorText1").innerText = "Please input 8 characters only.";
             meternumField.style.outline = "3px solid red";
             return;
         }
         if (meternumValue == "") {
-            alert("Please input a value before submitting.");
+            document.getElementById("errorText1").innerText = "Please fill up the form before submitting.";
             meternumField.style.outline = "3px solid red";
             return;
         }
 
         //validate previous read input
         if (previousreadValue == "" || isNaN(previousreadValue)) {
-            alert("Please input a valid numerical value for the previous reading before submitting.");
+            document.getElementById("errorText2").innerText = "Please input a valid numerical value before submitting.";
             previousreadField.style.outline = "3px solid red";
             return;
         }
         if (previousreadValue <= 0) {
-            alert("Previous reading value should not be less than or equal to 0");
+            document.getElementById("errorText2").innerText = "Previous reading value should not be less than or equal to 0.";
             previousreadField.style.outline = "3px solid red";
             return;
         }
         if (previousreadValue > currentreadValue) {
-            alert("Previous reading should not be greater than the current reading.");
+            document.getElementById("errorText2").innerText = "Previous reading value should not be greater than the current reading value.";
+            document.getElementById("errorText3").innerText = "Current reading value should not be less than the previous reading value.";
+
             previousreadField.style.outline = "3px solid red";
             currentreadField.style.outline = "3px solid red";
             return;
         }
         if (previousreadField.value.replace(/\./g, "").length > 5) { //excludes the period for length accuracy when input is a decimal
-            alert("Value should only have 5 digits");
+            document.getElementById("errorText2").innerText = "Please input 5 digits only";
             previousreadField.style.outline = "3px solid red";
             return;
         }
 
         //validate current read input
         if (currentreadValue == "" || isNaN(currentreadValue)) {
-            alert("Please input a valid numerical value for the current reading before submitting.");
+            document.getElementById("errorText3").innerText = "Please input a valid numerical value before submitting.";
             currentreadField.style.outline = "3px solid red";
             return;
         }
         if (currentreadValue <= 0) {
-            alert("Current reading value should not be less than or equal to 0");
+            document.getElementById("errorText3").innerText = "Current reading value should not be less than or equal to 0.";
             currentreadField.style.outline = "3px solid red";
             return;
         }
         if (currentreadField.value.replace(/\./g, "").length > 5) {
-            alert("Value should only have 5 digits");
+            document.getElementById("errorText3").innerText = "Please input 5 digits only";
             currentreadField.style.outline = "3px solid red";
             return;
         }
 
         //validate cost input
         if (costvalue == "" || isNaN(costvalue)) {
-            alert("Please input a valid numerical value for the cost before submitting.");
+            document.getElementById("errorText4").innerText = "Please input a valid numerical value before submitting.";
             costField.style.outline = "3px solid red";
             return;
         }
         if (costvalue <= 0) {
-            alert("Cost value should not be less than or equal to 0");
+            document.getElementById("errorText4").innerText = "Cost value should not be less than or equal to 0.";
             costField.style.outline = "3px solid red";
             return;
         }
