@@ -59,14 +59,6 @@ function validateAndCalculate(event) {
             previousreadField.style.outline = "3px solid red";
             return;
         }
-        if (previousreadValue > currentreadValue) {
-            document.getElementById("errorText2").innerText = "Previous reading value should not be greater than the current reading value.";
-            document.getElementById("errorText3").innerText = "Current reading value should not be less than the previous reading value.";
-
-            previousreadField.style.outline = "3px solid red";
-            currentreadField.style.outline = "3px solid red";
-            return;
-        }
         if (previousreadField.value.replace(/\./g, "").length > 5) { //excludes the period for length accuracy when input is a decimal
             document.getElementById("errorText2").innerText = "Please input 5 digits only";
             previousreadField.style.outline = "3px solid red";
@@ -81,6 +73,14 @@ function validateAndCalculate(event) {
         }
         if (currentreadValue <= 0) {
             document.getElementById("errorText3").innerText = "Current reading value should not be less than or equal to 0.";
+            currentreadField.style.outline = "3px solid red";
+            return;
+        }
+        if (previousreadValue > currentreadValue) {
+            document.getElementById("errorText2").innerText = "Previous reading value should not be greater than the current reading value.";
+            document.getElementById("errorText3").innerText = "Current reading value should not be less than the previous reading value.";
+
+            previousreadField.style.outline = "3px solid red";
             currentreadField.style.outline = "3px solid red";
             return;
         }
