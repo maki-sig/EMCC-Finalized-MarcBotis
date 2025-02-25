@@ -37,13 +37,13 @@ function validateAndCalculate(event) {
             meternumField.style.outline = "3px solid red";
             return;
         }
-        if (!meternumPattern.test(meternumValue)) {
-            document.getElementById("errorText1").innerText = "Format must be 4 letters and 4 numbers. (eg. ABCD1234)";
+        if (meternumValue.length > 8) {
+            document.getElementById("errorText1").innerText = "Please input 8 characters only.";
             meternumField.style.outline = "3px solid red";
             return;
         }
-        if (meternumValue.length > 8) {
-            document.getElementById("errorText1").innerText = "Please input 8 characters only.";
+        if (!meternumPattern.test(meternumValue)) {
+            document.getElementById("errorText1").innerText = "Format must be 4 letters and 4 numbers. (eg. ABCD1234)";
             meternumField.style.outline = "3px solid red";
             return;
         }
