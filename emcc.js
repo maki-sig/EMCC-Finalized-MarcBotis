@@ -32,6 +32,11 @@ function validateAndCalculate(event) {
         document.getElementById("errorText4").innerText = "";
 
         //validate meter number input, if meter number is not the same as the pattern and length is greater than 8 alert an error
+        if (meternumValue == "") {
+            document.getElementById("errorText1").innerText = "Please fill up the form before submitting.";
+            meternumField.style.outline = "3px solid red";
+            return;
+        }
         if (!meternumPattern.test(meternumValue)) {
             document.getElementById("errorText1").innerText = "Format must be 4 letters and 4 numbers. (eg. ABCD1234)";
             meternumField.style.outline = "3px solid red";
@@ -42,12 +47,7 @@ function validateAndCalculate(event) {
             meternumField.style.outline = "3px solid red";
             return;
         }
-        if (meternumValue == "") {
-            document.getElementById("errorText1").innerText = "Please fill up the form before submitting.";
-            meternumField.style.outline = "3px solid red";
-            return;
-        }
-
+        
         //validate previous read input
         if (previousreadValue == "" || isNaN(previousreadValue)) {
             document.getElementById("errorText2").innerText = "Please input a valid numerical value before submitting.";
