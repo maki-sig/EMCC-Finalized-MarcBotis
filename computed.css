@@ -263,12 +263,12 @@ input:focus {
     transition: 0.3s;
 }
 
-#sayonara:hover {
+#sayonara:hover, #themeBtn:hover{
     background-color: #ad5d4a;
     transition: 0.1s
 }
 
-#sayonara:active {
+#sayonara:active, #themeBtn:active {
     background-color: #6b372a;
 }
 
