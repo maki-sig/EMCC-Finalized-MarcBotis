@@ -25,11 +25,12 @@
 
     </head>
 
-    <body>
+    <body class="normalTheme">
+       
         
         <!-- BACKGROUND AND CONTENT -->
          <div class="col-sm-12" id="bgAndContent">
-
+            
             <!-- BACKGROUND -->
             <div class="row" id="bgRow">
 
@@ -40,19 +41,28 @@
 
             <!-- CONTENTS -->
             <div class="row" id="contentRow">
+                
+                <nav class="navbar navbar-default" style="margin: auto; padding: 1%;" id="nav">
+                    <div class="container-fluid">
+                      <ul class="nav navbar-nav">
+                        <button id="themeBtn" onclick="changeTheme(event)">Theme</button>
+                      </ul>
+                    </div>
+                </nav>
 
                 <div class="col-sm-6" id="catGifContent"> 
-
+                    
                     <div class="catGifWrapper">
                         <dotlottie-player src="https://lottie.host/665d7f7f-e1b6-4b0a-8370-15ecbbb2c2f6/74TDdvsNa4.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
                     </div>
-
+                    
                 </div>
 
                 <div class="col-sm-6" id="answerContent">
-
+                    
                     <div class="summaryDiv">
                         
+
                         <!-- input tag id monthlyconsump and totalcost, answer will show here -->
                         <div class="form-group mb-5">
                             <label for="monthlyconsump">Monthly Consumption (kWh)</label>
@@ -87,7 +97,7 @@
                         </ul>
 
                         <button type="button" id="sayonara" onclick="onSayonaraClicked(event)">SAYONARA!</button>
-                    
+                         
                     </div>
 
                 </div>

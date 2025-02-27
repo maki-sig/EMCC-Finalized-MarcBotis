@@ -105,7 +105,7 @@ function validateAndCalculate(event) {
         //hide contents
         document.getElementById("content").style.display = "none";
         document.getElementById("secondhalf").style.display = "none";
-
+        document.getElementById("nav").style.display = "none";
         //show loading screen
         document.getElementById("loadingscreen").style.display = "block";
 
@@ -198,6 +198,7 @@ function onSayonaraClicked(event) {
     //hide contents
     document.getElementById("catGifContent").style.display = "none";
     document.getElementById("answerContent").style.display = "none";
+    document.getElementById("nav").style.display = "none";
 
     //show thank you screen
     document.getElementById("thankyouScreen").style.display = "flex";
@@ -207,3 +208,16 @@ function onSayonaraClicked(event) {
         window.location.href = "index.html";
     }, 5000);
 }
+
+function changeTheme(event) {
+    const bodyElement = document.body;
+
+    if (bodyElement.classList.contains("normalTheme")) {
+        bodyElement.classList.remove("normalTheme");
+        bodyElement.classList.add("darkTheme");
+    } else {
+        bodyElement.classList.remove("darkTheme");
+        bodyElement.classList.add("normalTheme");
+    }
+}
+

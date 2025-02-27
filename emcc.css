@@ -1,9 +1,68 @@
 /* BODY */
-body {
+
+.normalTheme {
     height: 100vh; 
     margin: 0; 
     background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
     background-attachment: fixed;
+}
+
+.darkTheme {
+    background-color: #2e2c4e;  
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.darkTheme #txtdesc {
+    transition: color 0.5s ease;
+    color: white;
+}
+
+.darkTheme input {
+    transition: color 0.5s ease;
+    color: white;
+    background-color: rgb(48, 47, 51);
+}
+
+.darkTheme #txtheader {
+    color: rgb(0, 197, 197);
+}
+
+.darkTheme #themeBtn, .darkTheme #btn {
+    background-color: #1a8888;
+}
+
+.darkTheme #btn:hover, .darkTheme #themeBtn:hover {
+    background-color: #146868;
+    color: white;
+    transition: 0.1s
+}
+
+.darkTheme #btn:active, .darkTheme #themeBtn:active {
+    background-color: #0c4242;
+    color: white;
+}
+
+.darkTheme #calculatingtxt {
+    color: #00c5c5;
+}
+
+.darkTheme input:focus {
+    outline: 3px solid #00c5c5;
+}
+
+
+#themeBtn {
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    color: white;
+    padding: 8px;
+    background-color: #DF735B;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    top: -5%;
 }
 
 #row {
@@ -38,6 +97,7 @@ body {
     color: #1B1F2F;
     margin: auto;
     margin-top: 5%;
+    transition: 0.5s;
 }
 
 /* CROP GIF */
@@ -118,6 +178,7 @@ input {
     width: 100%;
     border-radius: 5px;
     border: 0px solid;
+    transition: 0.5s;
 }
 
 input:focus {
@@ -146,13 +207,13 @@ input:focus {
     transition: 0.3s;
 }
 
-#btn:hover {
+#btn:hover, #themeBtn:hover {
     background-color: #ad5d4a;
     color: white;
     transition: 0.1s
 }
 
-#btn:active {
+#btn:active, #themeBtn:active {
     background-color: #6b372a;
     color: white;
 }
@@ -238,6 +299,10 @@ input:focus {
     height: 100%;  */
 }
 
+#nav {
+    margin: auto;
+}
+
 /* MAKE LOADING SCREEN RESPONSIVE FOR MOBILE */
 @media (max-width: 920px) {
     #calculatingtxt {
@@ -254,6 +319,14 @@ input:focus {
     #calculatingtxt {
         font-size: 35px;  
     }
+
+    #txtheader {
+        line-height: 38.73px;
+    }
+
+    #nav {
+        right: 0px;
+    }
     
     .animation-wrapper2 dotlottie-player {
         width: 200px !important; /* Further reduce animation size */
@@ -265,7 +338,7 @@ input:focus {
     color: red;
     font-family: Inter;
     font-weight: 500;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); 
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);  */
 }
 
 

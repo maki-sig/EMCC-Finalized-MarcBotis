@@ -26,18 +26,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <body>
-
+    <body class="normalTheme">
+        <nav class="navbar navbar-default" style="margin: auto; padding: 1%; position: absolute; z-index: 9999;" id="nav">
+            <div class="container-fluid ms-auto">
+              <ul class="nav navbar-nav">
+                <button id="themeBtn" onclick="changeTheme(event)">Theme</button>
+              </ul>
+            </div>
+        </nav>
         <div class="row" id="row">
             <!-- FIRST HALF -->
             <div class="col-sm-5 position-relative" id="firsthalf">
+            
                 
                 <div class="content" id="content">
+                    
                     <h1 class="display1" id="txtheader">Electric Meter Consumption Calculator</h1>
                     <h2 class="display2" id="txtdesc">
                         Track your electricity usage and manage bills with ease.
                     </h2>
-    
+                    
                     <div class="animation-wrapper">
                         <dotlottie-player src="https://lottie.host/89e2033a-066e-4f6e-9557-bcf00fdccd68/43iVGMV3fc.lottie" 
                             background="transparent" speed="1" loop autoplay></dotlottie-player>
@@ -49,6 +57,7 @@
             
             <!-- SECOND HALF -->
             <div class="col-sm-7" id="secondhalf">
+               
                 <!-- FORM -->
                 <form id="calculatorform" onsubmit="validateAndCalculate(event)">
 
@@ -120,6 +129,8 @@
             </div> 
 
         </div>
+
+       
 
     </body>
 </html>

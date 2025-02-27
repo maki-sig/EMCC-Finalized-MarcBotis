@@ -1,9 +1,52 @@
 /* BODY BG COLOR */
-body {
+.normalTheme {
     margin: 0; 
     background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
     background-attachment: fixed;
 
+}
+
+.darkTheme {
+    background-color: #2e2c4e;  
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.darkTheme #totalcost, .darkTheme #monthlyconsump   {
+    color: #146868;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.darkTheme #themeBtn, .darkTheme #sayonara {
+    background-color: #1a8888;
+}
+
+.darkTheme #sayonara:hover, .darkTheme #themeBtn:hover {
+    background-color: #146868;
+    color: white;
+    transition: 0.1s
+}
+
+.darkTheme #sayonara:active, .darkTheme #themeBtn:active {
+    background-color: #0c4242;
+    color: white;
+}
+.darkTheme #thankyouTxt {
+    color: #00c5c5;
+}
+
+
+#themeBtn {
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    color: white;
+    padding: 8px;
+    background-color: #DF735B;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    top: -5%;
 }
 
 #bgAndContent {
