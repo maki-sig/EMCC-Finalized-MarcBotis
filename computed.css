@@ -57,6 +57,11 @@
     overflow: hidden;  
 }
 
+hr {
+    height: 2px;
+    color: white;
+}
+
 /* TILT ANIMATION FOR THE ROW ID*/
 @keyframes tiltAnimation {
     0% {
