@@ -5,7 +5,7 @@ function validateAndCalculate(event) {
     event.preventDefault();
 
         //initialize variable using get element function and value
-        const meternumValue = document.getElementById("meternum").value;
+        const meternumValue = (document.getElementById("meternum").value).replace(/\s+/g, '');
         const previousreadValue = parseFloat(document.getElementById("prevreadinput").value);
         const currentreadValue = parseFloat(document.getElementById("currentreadinput").value);
         const costvalue = parseFloat(document.getElementById("costinput").value);
