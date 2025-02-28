@@ -18,7 +18,7 @@
 }
 
 .darkTheme input {
-    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
     color: white;
     background-color: rgb(48, 47, 51);
 }
