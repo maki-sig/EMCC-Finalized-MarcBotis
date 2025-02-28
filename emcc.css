@@ -182,6 +182,7 @@ input {
 
 input:focus {
     outline: 3px solid #DF735B;
+    transition: outline 0s;
 }
 
 .form-group {
